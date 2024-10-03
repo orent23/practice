@@ -1,0 +1,50 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+/* шрифти */
+@font-face {
+	font-family: "Proxima Nova";
+	src:
+url("../fon/ProximaNova-Regular.woff2") format("woff2"),
+	url("../fon/ProximaNova-Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	src:
+	url("../fon/ProximaNova-Semibold.woff2") format("woff2"),
+url("../fon/ProximaNova-Semibold.woff") format("woff");
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+/*---------------------------------*/
+body{
+  font-family: "Proxima Nova Rg","Proxima Nova Lt",sans-serif;
+	color: hsl(0, 0%, 33%);
+	background-color: rgb(247, 247, 247);
+
+}
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main {
+  padding-block: 20px;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+
+/* --------container---------- */
+[class*=__container] {
+	max-width: 1320px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
