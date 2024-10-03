@@ -486,7 +486,7 @@ max-width: 100%;
 @media (max-width: 330.98px){
 	.header-main__acction{
 		flex-direction: column;
-		align-self: center;
+	justify-content: center;
 	}
 	}
 
