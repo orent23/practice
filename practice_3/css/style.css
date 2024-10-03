@@ -483,11 +483,12 @@ max-width: 100%;
 		align-items: stretch;
 	}
 }
-@media (max-width: 479.98px){
-.header-main__acction{
-	flex-direction: column;
-}
-}
+@media (max-width: 330.98px){
+	.header-main__acction{
+		flex-direction: column;
+		align-self: center;
+	}
+	}
 
 
 /*----------section-2-----*/
