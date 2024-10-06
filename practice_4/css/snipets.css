@@ -1,0 +1,51 @@
+/*-not-last-child-*/
+.smth:not(:last-child){
+	margin-bottom: 50px;}
+
+		/*-any-hover-*/
+		@media (any-hover) {
+			.smth:hover {
+				
+		}}
+
+	/*-:before-*/
+	.smth:before{
+		content: "";
+		width: 24px;
+		height: 24px;}
+
+		/*-адаптив картинки-*/
+		.smth__picture{
+			position: relative;
+			display: block;
+			padding-bottom: 81%;
+			border-radius: 5px;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		.smth__picture img{
+			transition: transform 0.3s ease 0s;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			aspect-ratio: 370/220;
+		}
+		.smth__picture:hover img{
+			transform: scale(1.1);
+		}
+
+				/*-адаптив-*/
+				@media (max-width:991.98px){
+
+				}
+				@media (max-width:767.98px){
+					
+				}
+				@media (max-width:479.98px){
+					
+				}
+							/*-альтернатива запису-*/
+				@media (600px <= width) {}

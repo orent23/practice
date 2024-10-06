@@ -1,0 +1,38 @@
+
+/* шрифти */
+@font-face {
+	font-family: "Proxima Nova";
+	src:
+url("../fon/ProximaNova-Regular.woff2") format("woff2"),
+	url("../fon/ProximaNova-Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	src:
+	url("../fon/ProximaNova-Semibold.woff2") format("woff2"),
+url("../fon/ProximaNova-Semibold.woff") format("woff");
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "IntegralCF-Bold";
+	src:
+	url("../fon/IntegralCF-Bold.woff2") format("woff2"),
+url("../fon/IntegralCF-Bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Satoshi-Bold";
+	src:
+	url("../fon/Satoshi-Bold.woff2") format("woff2"),
+url("../fon/Satoshi-Bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
