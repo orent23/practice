@@ -1,0 +1,74 @@
+		
+		поява іконки при хавері
+		<a href="#" class="follow__item item-follow">
+											<div class="item-follow__icon icon-instagram">			</div>
+												<div class="item-follow__image">
+													<img src="img/prodacts/picture_1.png" alt="image">
+												</div>
+
+
+												// .item-follow =====================================================================
+
+//робимо релатів обгорткі
+.item-follow 
+display: inline-block;
+position: relative;
+&:focus-visible {
+	outline-color: #ff6f61;
+	.item-follow__icon {
+		opacity: 1;
+		background: rgba(0, 0, 0, 0.5);
+		&::before {
+			transform: scale(1);
+		}
+	}}
+	// .item-follow__icon
+
+// абсолют іконці і центруємо її
+	&__icon {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		//робимо її прозорою в звичайному режимі
+		opacity: 0;
+		// встановлюємо розмір
+		&::before {
+			font-size: 48px;
+			color: #fff;
+			transform: scale(0);
+			transition: transform 0.3s;
+		}
+		//робимо появу при хавері
+		@media (any-hover: none) {
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.5);
+			&::before {
+				transform: scale(1);
+			}
+		}
+//збільшуємо при хавері
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 1;
+				&::before {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	// .item-follow__image
+//центруємо і адаптуємо картинку
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 1 / 1;
+	
+	}
