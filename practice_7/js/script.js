@@ -74,6 +74,39 @@ function search() {
 }
 
 search();
+// поява панелі в картці
+
+function renderItems(categories, parent) {
+	const items = parent.querySelectorAll('.item-product');
+	items.forEach(item => {
+		const category = item.dataset.category;
+		if (categories.includes('all') || categories.some(item => item === category)) {
+			item.classList.add('show');
+		} else {
+			item.classList.remove('show');
+		}
+	});
+}
+
+// goto
+const goto = document.querySelectorAll('[data-goto]');
+goto.forEach(link => {
+	link.addEventListener('click', scrollToItem);
+});
+
+function scrollToItem(e) {
+	e.preventDefault();
+	const link = e.target.dataset.goto;
+	if (!link || !document.querySelector(link)) return;
+	const element = document.querySelector(link);
+	const heightToTop = element.getBoundingClientRect().top;
+	window.scrollBy({
+		top: heightToTop,
+		behavior: 'smooth'
+	})
+
+}
+
 
 // //функція натиску на іконку і появи пошуку
 // function search() {
