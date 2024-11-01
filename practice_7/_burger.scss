@@ -1,0 +1,119 @@
+.top {
+
+	// .top__wrapper
+
+	&__wrapper {
+	}
+
+	// .top__container
+
+	&__container {
+	}
+
+	// .top__row
+
+	&__row {
+	}
+
+	// .top__info
+
+	&__info {
+	}
+
+	// .top__image
+
+	&__image {
+	}
+}
+.info-top {
+
+	// .info-top__row
+
+	&__row {
+	}
+
+	// .info-top__title
+
+	&__title {
+	}
+
+	// .info-top__text
+
+	&__text {
+	}
+
+	// .info-top__button
+
+	&__button {
+	}
+
+	// .info-top__key-metrics
+
+	&__key-metrics {
+	}
+}
+.key-metrics-top {
+
+	// .key-metrics-top__row
+
+	&__row {
+	}
+
+	// .key-metrics-top__info
+
+	&__info {
+	}
+
+	// .key-metrics-top__info-number
+
+	&__info-number {
+	}
+
+	// .key-metrics-top__text
+
+	&__text {
+	}
+
+	// .key-metrics-top__border
+
+	&__border {
+	}
+}
+.image-top {
+
+	// .image-top__picture
+
+	&__picture {
+		position: relative;
+		height:100% ;
+		width: 100%;
+	
+	
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		@media (min-width: toEm(844.98)) {
+			min-width: toRem(430);
+		}
+		@media (max-width: toEm(844.98)) {
+			object-fit: 390 / 448;
+		}
+	}
+
+	// .image-top__decoration--right
+
+	&__decoration--right {
+		position: absolute;
+		width: percent(104, 620);
+		right: toRem(9);
+		top: percent(43, 620);
+	}
+
+	// .image-top__decoration--left
+
+	&__decoration--left {
+		position: absolute;
+		width: percent(59, 620);
+			left: 0;
+			top: percent(254, 620);
+	}
+}
