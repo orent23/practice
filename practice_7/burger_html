@@ -1,8 +1,0 @@
-<!--burger--> 
-<button aria-label="open menu" type="button" class="main-header__icon-menu icon-menu"><span></span></button>
-
-<!--білий фон під меню--> 
-<div class="header__burger burger-header">
-<div class="burger-header__container">
-</div>
-</div>
