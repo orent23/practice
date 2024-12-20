@@ -115,6 +115,7 @@
 		column-gap: toRem(30);
 		row-gap: toRem(8);
 		@media (max-width: toEm(991.98)) {
+		
 			flex-direction: column;
 			row-gap: toRem(20);
 	
@@ -124,6 +125,9 @@
 			height: 100%;
 			width: 2px;
 			background-color: $yellowColor;
+			box-shadow: 
+			-3px 0 6px rgba(185, 113, 19, 0.497), // Тінь зліва (ширина тіні 7px)
+			3px 0 6px rgba(185, 113, 19, 0.497);  // Тінь справа (ширина тіні 7px)
 			@media (max-width: 467.98px) {
 				width: 150%;
 				height: 2px;
@@ -138,7 +142,12 @@
 
 	// .menu__item
 	&__item {
-
+@media (max-width: 991.98px) {
+	border: 1px solid $lightColor;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Додаємо тінь
+	padding-block: toRem(7);
+	padding-inline: toRem(7);
+}
 @media (max-width: 467.98px) {
 
 	display: flex; // Встановлюємо flexbox
@@ -421,8 +430,15 @@
 			background: url('../img/icons/heart.svg') 0 0 no-repeat;
 			width: 28.384px;
 height: 24.818px;
-flex-shrink: 0;
-
+flex-shrink: 1;
+@media (max-width: 479.98px) {
+	top: 10%; // Можливо, для менших екранів змінити позицію
+	left: 50%; // Залишаємо по центру
+	width: 20.384px;
+	height: 16.818px;
+	background-size: contain; // Додаємо адаптивне масштабування
+	
+}
 	}
 	}
 	&__logo {
@@ -1189,13 +1205,20 @@ flex-shrink: 0;
 			flex-direction: column;
 			row-gap: toRem(15);
 		}
-		
+		@media (max-width: 467.98px) {
+			margin-top: 10px;
+		}
 		
 	}
 
 	// .bottom-header__item
 	&__item {
-		
+		@media (max-width: 991.98px) {
+			padding-block: toRem(7);
+			border: 1px solid $lightColor;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Додаємо тінь
+			padding-inline: toRem(7);
+		}
 @media (max-width: 467.98px) {
 
 	display: flex; // Встановлюємо flexbox
@@ -1221,6 +1244,7 @@ text-align: center;
 		transition: color 0.3s;
 		&::before {
 			color: $yellowColor;
+
 			inline-size: toRem(24);
 			block-size: toRem(24);
 			font-size: toRem(20);
@@ -1264,7 +1288,9 @@ text-align: center;
 			width: 150%;
 			height: 2px;
 			background-color: $yellowColor;
-		
+			box-shadow: 
+				-7px 0 6px rgba(185, 113, 19, 0.663), // Тінь зліва (ширина тіні 7px)
+				7px 0 6px rgba(169, 39, 39, 0.74);  // Тінь справа (ширина тіні 7px)
 				
 				
 			}
