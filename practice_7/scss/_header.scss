@@ -210,8 +210,12 @@
 		}  
 		@media (max-width: toEm(991.98)) {
 			font-size: toRem(25);
+			row-gap: toRem(25);
 		}
-	
+	@media (max-width: 540.98px) {
+		font-size: toRem(35);
+		row-gap: toRem(40);
+	}
 	}
 
 	// .nav-main-header__item
@@ -360,6 +364,7 @@ transition: all 0.4s;
 		justify-content: center;
 		align-self: center;
 		transition: all 0.4s;
+	
 		@media (any-hover: hover) {
 			&:hover {
 		text-decoration: underline;
@@ -435,14 +440,14 @@ transition: all 0.4s;
 			color: grey;
 			transition: all 0.3s;
 			span {
-				block-size: toRem(17);
+				block-size: toRem(14);
 				aspect-ratio: 1 / 1;
 				position: absolute;
 				inset-inline-start: 50%;
-				inset-block-start: 50%;
+				inset-block-start: 45%;
 				transform: translate(-50%, -50%);
 				transition: transform 0.3s;
-				font-size: toRem(18);
+				// font-size: toRem(18);
 				&:first-child {
 				}
 				&:last-child {
@@ -450,14 +455,16 @@ transition: all 0.4s;
 				}
 				.search-open & {
 					&:first-child {
-						transform: translate(-50%, -50%) scale(0);
+						transform: translate(-50%, -46%) scale(0);
 					}
 					&:last-child {
-						transform: translate(-50%, -50%) scale(1);
+						transform: translate(-50%, -48%) ;
+						@media (max-width: 478.98px) {
+							transform: translate(-50%, -39%) scale(1.05);
+							block-size: toRem(18);
+						}
 					}
-					@media (max-width: 479.98px) {
-						block-size: toRem(25);
-					}
+				
 				}
 			}
 			@media (any-hover: hover) {
@@ -466,15 +473,6 @@ transition: all 0.4s;
 				}
 			}
 
-			@media (max-width: toEm(479.98)) {
-
-				span {
-					block-size: toRem(18);
-					&::before {
-						font-size: toRem(18);
-					}
-				}
-			}
 		}
 	}
 }
@@ -870,15 +868,21 @@ line-height: 1.7;
 // Quantity
 .quantity {
 	display: flex;
-max-width:toRem(126) ;
+width:toRem(126) ;
 	background-color: #F0F0F0;
 	border: toRem(1) solid #F0F0F0;
 	border-radius: toRem(62);
 	min-height: toRem(50);
 	padding-inline: toRem(20);
 	@media (max-width: 820.98px) {
+		min-height: toRem(40);
+		// padding-inline: toRem(16);
+	}
+	@media (max-width: 420.98px) {
 		min-height: toRem(35);
-		padding-inline: toRem(16);
+		padding-inline: toRem(10);
+		width:toRem(80) ;
+		// padding-inline: toRem(16);
 	}
 	// .quantity__button
 	&__button {
@@ -890,7 +894,9 @@ max-width:toRem(126) ;
 		font-size: toRem(14);
 		@media (max-width: 820.98px) {
 			inline-size: toRem(22);
+			flex-shrink: 1;
 		}
+	
 	}
 	// .quantity__input
 	&__input {

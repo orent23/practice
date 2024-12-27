@@ -1105,7 +1105,10 @@ flex-direction: column;
 	// .subscribe__letter
 
 	&__letter {
-		
+		@media (max-width: 667.98px) {
+			// width: 350px;
+			@include adaptiveValue("width", 350, 250, 0, 667.98, 320);
+		}
 	}
 
 	// .subscribe__button
@@ -1122,6 +1125,9 @@ flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		transition: all 0.4s;
+		@media (max-width: 672.98px) {
+width: 100%;
+		}
 		&:focus-visible {
 			outline-color: #ff6f61;
 		}
@@ -1306,8 +1312,21 @@ font-weight: 700;
 	font-family: "Satoshi",sans-serif;
 	font-weight: 500;
 	font-size: toRem(20);
-	
-		
+	&:first-child {
+		display: none;
+		.hide & {
+			display: flex;
+		}
+		&::before {
+			transform: rotate(-180deg) translateY(toRem(2));
+		}
+	}
+	&:last-child {
+		display: flex;
+		.hide & {
+			display: none;
+		}
+	}
 	}
 	.active & {
 		flex-shrink: 0;
