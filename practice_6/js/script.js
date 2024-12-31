@@ -34,9 +34,9 @@ function checkAvailabilityForm(e) {
 	toggleSearchForm(form, true);
 }
 
-const buttonSearch = document.querySelector('.top-header__icon-search');
+const buttonSearch = document.querySelector('.bottom-header__icon-search');
 buttonSearch.addEventListener('click', () => {
-	const form = document.querySelector('.top-header__form');
+	const form = document.querySelector('.bottom-header__form');
 	if (form) {
 		toggleSearchForm(form);
 		buttonSearch.classList.toggle('active');
@@ -142,6 +142,11 @@ function scrollToItem(e) {
 		top: heightToTop,
 		behavior: 'smooth'
 	})
-
 }
-
+function scrollToTop(event) {
+	event.preventDefault();
+	window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+	});
+}
